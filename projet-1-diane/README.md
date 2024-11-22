@@ -1,1 +1,0 @@
-outline vs ring
