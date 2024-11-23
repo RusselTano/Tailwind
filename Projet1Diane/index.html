@@ -4,109 +4,125 @@
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <script src="https://kit.fontawesome.com/33a775bcdb.js" crossorigin="anonymous"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vite + TS</title>
 </head>
 
 <body>
-  <div id="app">
-    <p class="bg-black p-1 text-center text-white">
-      GET 25% Off this summer Sale. Grap it fast !!
-      <strong>15H:45M:25S</strong>
-    </p>
+  <p class="bg-black p-1 text-center text-white">
+    GET 25% Off this summer Sale. Grap it fast !!
+    <strong>15H:45M:25S</strong>
+  </p>
 
-    <div class="container mx-auto">
+  <div class="container mx-auto">
 
-      <header class="flex justify-between py-4 items-center ">
-        <ul class="flex gap-x-4">
-          <li>Man</li>
-          <li>Woman</li>
-          <li>Kids</li>
-          <li>Cadeaux</li>
-        </ul>
-        <span class="font-black text-4xl ">Diane</span>
-        <ul class="flex gap-x-4">
-          <li>
-            <img src="./src/assets/icons/search.svg" alt="">
-          </li>
-          <li>
-            <img src="./src/assets/icons/shopping-bag.svg" alt="">
-          </li>
-          <li>
-            <img src="./src/assets/icons/arrow-left-to-bracket.svg" alt="">
-          </li>
-        </ul>
-      </header>
+    <header class="px-6 pl-0  flex justify-between py-4 items-center relative">
+      <ul class="hidden sm:flex gap-x-4">
+        <li>Man</li>
+        <li>Woman</li>
+        <li>Kids</li>
+        <li>Cadeaux</li>
+      </ul>
+      <span class="font-black text-4xl pl-6 sm:pl-0">Diane</span>
+      <ul class="hidden sm:flex gap-x-4">
+        <li>
+          <img src="./src/assets/icons/search.svg" alt="">
+        </li>
+        <li>
+          <img src="./src/assets/icons/shopping-bag.svg" alt="">
+        </li>
+        <li>
+          <img src="./src/assets/icons/arrow-left-to-bracket.svg" alt="">
+        </li>
+      </ul>
+      <div class="p-2 px-4 cursor-pointer sm:hidden relative flex" id="menu-trigger">
+        <i class="fa-solid fa-bars fa-xl absolute inset-0"></i>
+        <i class="fa-solid fa-x fa-xl absolute inset-0 hidden"></i>
+      </div>
+      <ul id="menu" class="hidden absolute top-16 w-full py-2 *:my-2 *:px-6 *:py-2 *:cursor-pointer border-b bg-white">
+        <li class="border-l-4 bg-gray-100 border-black">Accueil</li>
+        <li class="hover:bg-gray-100 ">Man</li>
+        <li class="hover:bg-gray-100 ">Woman</li>
+        <li class="hover:bg-gray-100 ">Kids</li>
+        <li class="hover:bg-gray-100 ">Cadeaux</li>
+        <li class="hover:bg-gray-100 ">Rechercher</li>
+        <li class="hover:bg-gray-100 ">Panier</li>
+        <li class="hover:bg-gray-100 ">Connexion</li>
+        <!-- <li><img src="./src/assets/icons/search.svg" alt=""></li>
+        <li><img src="./src/assets/icons/shopping-bag.svg" alt=""></li>
+        <li><img src="./src/assets/icons/arrow-left-to-bracket.svg" alt=""></li> -->
+      </ul>
+    </header>
 
-      <section class="mb-10">
-        <div class="h-96 bg-[url('./src/assets/img/hero.jpg')] bg-cover rounded-2xl bg-center overflow-hidden">
-          <div class="bg-black/50 h-full flex flex-wrap content-end items-end text-white p-6 gap-2">
-            <div class="flex flex-col gap-y-3 flex-auto">
-              <h1 class="text-white text-4xl font-medium">Summer Collection</h1>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus eveniet laudantium voluptatem ea sed
-                tempora at veritatis nihil consectetur odio laborum odit
-              </p>
-            </div>
-            <button class=" bg-white text-black p-2 rounded-full text-sm px-6 py-2 ">Shop Now</button>
+    <section class="mb-10">
+      <div class="h-96 bg-[url('./src/assets/img/hero.jpg')] bg-cover rounded-2xl bg-center overflow-hidden">
+        <div class="bg-black/50 h-full flex flex-wrap content-end items-end text-white p-6 gap-2">
+          <div class="flex flex-col gap-y-3 flex-auto">
+            <h1 class="text-white text-4xl font-medium">Summer Collection</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus eveniet laudantium voluptatem ea sed
+              tempora at veritatis nihil consectetur odio laborum odit
+            </p>
           </div>
+          <button class=" bg-white text-black p-2 rounded-full text-sm px-6 py-2 ">Shop Now</button>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="mb-28 text-center">
-        <h2 class="mb-6 text-4xl font-medium">NEW COLLECTION</h2>
-        <p class="mb-8 text-sm text-gray-400">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit At maiores.
-        </p>
-        <div class="mb-4 flex justify-center gap-x-4 text-left">
-          <article class="flex basis-96 flex-col gap-y-2">
-            <div class="size-full rounded-3xl bg-[url('./src/assets/img/product-1.jpg')] bg-cover bg-center"></div>
-            <h3 class="text-lg font-medium">Manteau</h3>
-            <small class="text-sm text-gray-400">Lorem, ipsum dolor sit amet consectetur adipisicing. Lorem, ipsum
-              dolor sit amet consectetur adipisicing.</small>
-            <strong>$45</strong>
-          </article>
-          <article class="flex basis-96 flex-col gap-y-2">
-            <div class="basis-80 rounded-3xl bg-[url('./src/assets/img/product-2.jpg')] bg-cover bg-center"></div>
-            <h3 class="text-lg font-medium">T-shirt</h3>
-            <small class="text-sm text-gray-400">Lorem, ipsum dolor sit amet consectetur adipisicing. Lorem, ipsum
-              dolor sit amet consectetur adipisicing.</small>
-            <strong>$45</strong>
-          </article>
-          <article class="flex basis-96 flex-col gap-y-2">
-            <div class="basis-80 rounded-3xl bg-[url('./src/assets/img/product-3.jpg')] bg-cover bg-center"></div>
-            <h3 class="text-lg font-medium">Lunette</h3>
-            <small class="text-sm text-gray-400">Lorem, ipsum dolor sit amet consectetur adipisicing. Lorem, ipsum
-              dolor sit amet consectetur adipisicing.</small>
-            <strong>$45</strong>
-          </article>
-        </div>
-        <div class="mb-28 flex justify-center gap-x-4 text-left">
-          <article class="flex basis-96 flex-col gap-y-2">
-            <div class="basis-80 rounded-3xl bg-[url('./src/assets/img/product-4.jpg')] bg-cover bg-bottom"></div>
-            <h3 class="text-lg font-medium">Chaussures</h3>
-            <small class="text-sm text-gray-400">Lorem, ipsum dolor sit amet consectetur adipisicing. Lorem, ipsum
-              dolor sit amet consectetur adipisicing.</small>
-            <strong>$45</strong>
-          </article>
-          <article class="flex basis-96 flex-col gap-y-2">
-            <div class="basis-80 rounded-3xl bg-[url('./src/assets/img/product-5.jpg')] bg-cover bg-bottom"></div>
-            <h3 class="text-lg font-medium">Montres</h3>
-            <small class="text-sm text-gray-400">Lorem, ipsum dolor sit amet consectetur adipisicing. Lorem, ipsum
-              dolor sit amet consectetur adipisicing.</small>
-            <strong>$45</strong>
-          </article>
-          <article class="flex basis-96 flex-col gap-y-2">
-            <div class="basis-80 rounded-3xl bg-[url('./src/assets/img/product-6.jpg')] bg-cover bg-center"></div>
-            <h3 class="text-lg font-medium">Pantalons</h3>
-            <small class="text-sm text-gray-400">Lorem, ipsum dolor sit amet consectetur adipisicing. Lorem, ipsum
-              dolor sit amet consectetur adipisicing.</small>
-            <strong>$45</strong>
-          </article>
-        </div>
-      </section>
+    <section class="mb-28 text-center">
+      <h2 class="mb-6 text-4xl font-medium">NEW COLLECTION</h2>
+      <p class="mb-8 text-sm text-gray-400">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit At maiores.
+      </p>
+      <div
+        class="mb-4 px-6 grid grid-cols-1 grid-rows-2 justify-center gap-4 text-left md:grid-cols-[repeat(3,_minmax(0,_384px))] md:px-0">
+        <article class="flex basis-96 flex-col gap-y-2">
+          <div class="size-full rounded-3xl bg-[url('./src/assets/img/product-1.jpg')] bg-cover bg-center"></div>
+          <h3 class="text-lg font-medium">Manteau</h3>
+          <small class="text-sm text-gray-400">Lorem, ipsum dolor sit amet consectetur adipisicing. Lorem, ipsum
+            dolor sit amet consectetur adipisicing.</small>
+          <strong>$45</strong>
+        </article>
+        <article class="flex basis-96 flex-col gap-y-2">
+          <div class="basis-80 rounded-3xl bg-[url('./src/assets/img/product-2.jpg')] bg-cover bg-center"></div>
+          <h3 class="text-lg font-medium">T-shirt</h3>
+          <small class="text-sm text-gray-400">Lorem, ipsum dolor sit amet consectetur adipisicing. Lorem, ipsum
+            dolor sit amet consectetur adipisicing.</small>
+          <strong>$45</strong>
+        </article>
+        <article class="flex basis-96 flex-col gap-y-2">
+          <div class="basis-80 rounded-3xl bg-[url('./src/assets/img/product-3.jpg')] bg-cover bg-center"></div>
+          <h3 class="text-lg font-medium">Lunette</h3>
+          <small class="text-sm text-gray-400">Lorem, ipsum dolor sit amet consectetur adipisicing. Lorem, ipsum
+            dolor sit amet consectetur adipisicing.</small>
+          <strong>$45</strong>
+        </article>
+        <article class="flex basis-96 flex-col gap-y-2">
+          <div class="basis-80 rounded-3xl bg-[url('./src/assets/img/product-4.jpg')] bg-cover bg-bottom"></div>
+          <h3 class="text-lg font-medium">Chaussures</h3>
+          <small class="text-sm text-gray-400">Lorem, ipsum dolor sit amet consectetur adipisicing. Lorem, ipsum
+            dolor sit amet consectetur adipisicing.</small>
+          <strong>$45</strong>
+        </article>
+        <article class="flex basis-96 flex-col gap-y-2">
+          <div class="basis-80 rounded-3xl bg-[url('./src/assets/img/product-5.jpg')] bg-cover bg-bottom"></div>
+          <h3 class="text-lg font-medium">Montres</h3>
+          <small class="text-sm text-gray-400">Lorem, ipsum dolor sit amet consectetur adipisicing. Lorem, ipsum
+            dolor sit amet consectetur adipisicing.</small>
+          <strong>$45</strong>
+        </article>
+        <article class="flex basis-96 flex-col gap-y-2">
+          <div class="basis-80 rounded-3xl bg-[url('./src/assets/img/product-6.jpg')] bg-cover bg-center"></div>
+          <h3 class="text-lg font-medium">Pantalons</h3>
+          <small class="text-sm text-gray-400">Lorem, ipsum dolor sit amet consectetur adipisicing. Lorem, ipsum
+            dolor sit amet consectetur adipisicing.</small>
+          <strong>$45</strong>
+        </article>
+      </div>
+    </section>
 
-      <section class="flex flex-col gap-y-8 items-center mb-32">
+    <section class="flex flex-col gap-y-8 items-center mb-32">
         <div class="rounded-3xl bg-[url('./src/assets/img/wedding.png')] bg-cover bg-center h-80 w-full  "></div>
         <h2 class="text-2xl font-medium">WEAR TO WEDDING</h2>
         <p class="text-sm text-gray-400">
@@ -114,7 +130,7 @@
         <button class="rounded-full bg-black text-white px-6 py-2 text-sm">See details</button>
       </section>
 
-      <section class="flex justify-center gap-2 mb-28 text-white">
+    <section class="flex justify-center px-6 gap-2 mb-28 text-white flex-col sm:flex-row sm:px-0">
         <div
           class="flex items-start gap-y-2 flex-col justify-end p-6 h-96 basis-80 rounded-3xl bg-[url('./src/assets/img/man.jpg')] bg-cover bg-center">
           <h2 class="text-3xl font-medium">HOMME</h2>
@@ -132,7 +148,7 @@
         </div>
       </section>
 
-      <footer class="mb-32 flex gap-x-24">
+    <footer class="mb-32 flex flex-col gap-x-24 gap-y-12 px-6 sm:flex-row sm:px-0">
         <div class="flex basis-1/2 flex-col gap-y-6">
           <h2 class="font-extrabold text-4xl">Diane</h2>
           <p class="text-sm text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum ea optio enim
@@ -167,23 +183,23 @@
           </ul>
         </div>
       </footer>
+      
+      
     </div>
-    <footer class="bg-black text-white flex justify-between px-4">
+    <footer class="bg-black text-white text-center flex flex-col justify-between px-4 sm:flex-row">
       <p>&copy; 2021 Diane. All rights reserved</p>
-      <ul class="flex gap-x-4">
+      <ul class="flex gap-x-4 justify-center">
         <li>Terms and conditions</li>
         <li>Legal stuff</li>
         <li>We are hiring</li>
       </ul>
     </footer>
 
-  </div>
+
+
   <script type="module" src="/src/main.ts"></script>
 </body>
-<!-- bg-black/50 h-full flex items-center justify-center -->
 
 </html>
 
-<style>
 
-</style>
