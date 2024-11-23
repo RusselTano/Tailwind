@@ -1,13 +1,153 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,
+    initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/33a775bcdb.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,500&display=swap"
+    rel="stylesheet" />
+  <title>Projet 2 Saasy</title>
+</head>
+
+<body class="min-h-screen bg-gradient-to-r from-sky-500 to-purple-500 p-8">
+  <div class="container mx-auto min-h-screen rounded-2xl bg-white">
+
+    <!-- Header -->
+    <header class="grid grid-cols-3 items-center px-12 py-8 border-b">
+      <img src="./src/assets/images/logo.png" class="w-10" alt="">
+      <ul class="flex justify-center gap-x-6 text-slate-600 font-bold">
+        <li><a class="hover:text-sky-500" href="#">Home</a></li>
+        <li><a class="hover:text-sky-500" href="#">Invoices</a></li>
+        <li><a class="hover:text-sky-500" href="#">Clients</a></li>
+        <li><a class="hover:text-sky-500" href="#">Expenses</a></li>
+      </ul>
+      <ul class="flex items-center justify-end gap-3">
+        <li><i class="fa-regular fa-bell"></i></li>
+        <li><i class="fas fa-user-circle"></i></li>
+      </ul>
+    </header>
+
+    <!-- Invoices -->
+    <div class="flex justify-between px-12 py-8 border-b">
+      <ul class="flex font-bold gap-6 divide-x-2 items-center">
+        <li><a class="px-2 hover:text-sky-500  text-slate-600" href="#">Cashflow</a></li>
+        <li><a class="px-2 hover:text-sky-500 text-sky-500" href="#">Last 7 days</a></li>
+        <li><a class="px-2 hover:text-sky-500  text-slate-600" href="#">Last 30 days</a></li>
+        <li><a class="px-2 hover:text-sky-500  text-slate-600" href="#">All-time</a></li>
+      </ul>
+      <button class="bg-sky-500 text-white px-4 py-2 rounded-lg hover:bg-black transition">+ New Invoice</button>
+    </div>
+
+    <!-- Revenue -->
+    <div class="grid grid-cols-4 divide-x-2 border-b">
+      <div class="px-12 py-8">
+        <div class="flex justify-between text-slate-400  font-bold">
+          <p>Revenue</p>
+          <p>+4.75%</p>
+        </div>
+        <p class="text-2xl ">$ 1,200</p>
+      </div>
+      <div class="px-12 py-8">
+        <div class="flex justify-between text-slate-400  font-bold">
+          <p>Overdue invoices</p>
+          <p class="text-red-500">+12.61%</p>
+        </div>
+        <p class="text-2xl ">$ 12,101.00</p>
+      </div>
+      <div class="px-12 py-8">
+        <div class="flex justify-between text-slate-400  font-bold">
+          <p>Oustanding</p>
+          <p> -3.25%</p>
+        </div>
+        <p class="text-2xl ">$ 205,222.00</p>
+      </div>
+      <div class="px-12 py-8">
+        <div class="flex justify-between text-slate-400  font-bold">
+          <p>Expenses</p>
+          <p class="text-red-500">+5.15%</p>
+        </div>
+        <p class="text-2xl ">$ 22,250.00</p>
+      </div>
+    </div>
+
+    <!-- Recent activity -->
+    <div>
+      <h1 class="text-slate-500 font-bold px-12 pt-24 border-b pb-10">Recent activity</h1>
+      <h1 class="text-slate-500 font-bold px-12 border-b py-10">Today</h1>
+      <ul class="px-12">
+        <li class="grid px-12 grid-cols-[50px_repeat(3,1fr)] py-4">
+          <i class="fa-solid fa-circle-up text-slate-500 text-xl"></i>
+          <div class="flex gap-2 flex-col">
+            <div class="grid grid-cols-[100px_min-content] gap-x-4">
+              <p class="font-bold text-slate-500">$7.600.00</p>
+              <p class="font-bold text-green-500 bg-green-100 border-green-200 border px-2 rounded">Paid</p>
+            </div>
+            <p class="text-slate-500">$500.00 tax</p>
+          </div>
+          <div>
+            <p class="font-bold  text-slate-600 mb-2">Reform</p>
+            <p class="text-slate-400">For the work done on the website</p>
+          </div>
+          <div class="justify-self-end flex flex-col items-end gap-2">
+            <p class="text-sky-500 font-bold">View transaction</p>
+            <p class="text-slate-400">Website invoice <span class="text-black">#012541</span></p>
+          </div>
+        </li>
+        <li class="grid px-12 grid-cols-[50px_repeat(3,1fr)] py-4">
+          <i class="fa-solid fa-circle-up text-slate-500 text-xl"></i>
+          <div class="flex gap-2 flex-col">
+            <div class="grid grid-cols-[100px_min-content] gap-x-4">
+              <p class="font-bold text-slate-500">$7.600.00</p>
+              <p class="font-bold text-red-500 bg-red-100 border-red-200 border px-2 rounded">Overdue</p>
+              <p class="text-slate-500">$500.00 tax</p>
+            </div>
+          </div>
+          <div>
+            <p class="font-bold  text-slate-600 mb-2">Reform</p>
+            <p class="text-slate-400">For the work done on the website</p>
+          </div>
+          <div class="justify-self-end flex flex-col items-end gap-2">
+            <p class="text-sky-500 font-bold">View transaction</p>
+            <p class="text-slate-400">Website invoice <span class="text-black">#012541</span></p>
+          </div>
+        </li>
+        <li class="grid px-12 grid-cols-[50px_repeat(3,1fr)] py-4">
+          <i class="fa-solid fa-circle-up text-slate-500 text-xl"></i>
+          <div class="flex gap-2 flex-col">
+            <div class="grid grid-cols-[100px_min-content] gap-x-4">
+              <p class="font-bold text-slate-500">$7.600.00</p>
+              <p class="font-bold text-slate-500 bg-slate-100 border-slate-200 border px-2 rounded">Withdraw</p>
+              <p class="text-slate-500">$500.00 tax</p>
+            </div>
+          </div>
+          <div>
+            <p class="font-bold  text-slate-600 mb-2">Reform</p>
+            <p class="text-slate-400">For the work done on the website</p>
+          </div>
+          <div class="justify-self-end flex flex-col items-end gap-2">
+            <p class="text-sky-500 font-bold">View transaction</p>
+            <p class="text-slate-400">Website invoice <span class="text-black">#012541</span></p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
 </html>
+
+<!-- 
+        <li><img src="  https://randomuser.me/api/portraits/women/65.jpg" alt=""></li>
+
+              <div class="grid grid-cols-3 gap-8 px-12 py-8">
+        <div class="bg-white rounded-lg shadow-lg p-8">
+          <h2 class="text-sky-500 font-bold text-2xl">Total Revenue</h2>
+        </div>
+    </div>
+ -->
