@@ -13,7 +13,7 @@
   <title>Projet 2 Saasy</title>
 </head>
 
-<body class="min-h-screen bg-gradient-to-r from-sky-500 to-purple-500 p-8">
+<body class="min-h-screen bg-gradient-to-r from-sky-500 to-purple-500 p-8 md:text-base text-sm">
   <div class="container mx-auto min-h-screen rounded-2xl bg-white">
 
     <!-- Header -->
@@ -32,18 +32,20 @@
     </header>
 
     <!-- Invoices -->
-    <div class="flex justify-between px-12 py-8 border-b">
-      <ul class="flex font-bold gap-6 divide-x-2 items-center">
-        <li><a class="px-2 hover:text-sky-500  text-slate-600" href="#">Cashflow</a></li>
-        <li><a class="px-2 hover:text-sky-500 text-sky-500" href="#">Last 7 days</a></li>
-        <li><a class="px-2 hover:text-sky-500  text-slate-600" href="#">Last 30 days</a></li>
-        <li><a class="px-2 hover:text-sky-500  text-slate-600" href="#">All-time</a></li>
-      </ul>
+    <div class="flex sm:flex-row flex-col-reverse md:items-center sm:justify-between px-5 md:px-12 py-8 border-b">
+      <div class="flex flex-col md:flex-row gap-2">
+        <p class=" font-bold text-slate-600 md:border-r-2 p-3 pl-0">Cashflow</p>
+        <ul class="flex font-bold gap-6 items-center">
+          <li><a class=" hover:text-sky-500 text-sky-500" href="#">Last 7 days</a></li>
+          <li><a class=" hover:text-sky-500  text-slate-600" href="#">Last 30 days</a></li>
+          <li><a class=" hover:text-sky-500  text-slate-600" href="#">All-time</a></li>
+        </ul>
+      </div>
       <button class="bg-sky-500 text-white px-4 py-2 rounded-lg hover:bg-black transition">+ New Invoice</button>
     </div>
 
     <!-- Revenue -->
-    <div class="grid grid-cols-4 divide-x-2 border-b">
+    <div class="grid grid-cols-1 lg:grid-cols-4 divide-x-2 *:border-b">
       <div class="px-12 py-8">
         <div class="flex justify-between text-slate-400  font-bold">
           <p>Revenue</p>
@@ -76,61 +78,64 @@
 
     <!-- Recent activity -->
     <div>
-      <h1 class="text-slate-500 font-bold px-12 pt-24 border-b pb-10">Recent activity</h1>
-      <h1 class="text-slate-500 font-bold px-12 border-b py-10">Today</h1>
-      <ul class="px-12">
-        <li class="grid px-12 grid-cols-[50px_repeat(3,1fr)] py-4">
+      <h1 class="text-slate-500 font-bold px-2 sm:px-12 pt-24 border-b pb-10">Recent activity</h1>
+      <h1 class="text-slate-500 font-bold px-2 sm:px-12 border-b py-10">Today</h1>
+      <ul class="px-2 sm:px-12">
+        <li class="grid px sm:px-12 grid-cols-[30px_repeat(2,1fr)]  py-4">
           <i class="fa-solid fa-circle-up text-slate-500 text-xl"></i>
           <div class="flex gap-2 flex-col">
-            <div class="grid grid-cols-[100px_min-content] gap-x-4">
+            <div class="grid grid-cols-[100px_min-content]">
               <p class="font-bold text-slate-500">$7.600.00</p>
               <p class="font-bold text-green-500 bg-green-100 border-green-200 border px-2 rounded">Paid</p>
             </div>
             <p class="text-slate-500">$500.00 tax</p>
           </div>
-          <div>
+          <div class="sm:visible hidden">
             <p class="font-bold  text-slate-600 mb-2">Reform</p>
             <p class="text-slate-400">For the work done on the website</p>
           </div>
           <div class="justify-self-end flex flex-col items-end gap-2">
             <p class="text-sky-500 font-bold">View transaction</p>
-            <p class="text-slate-400">Website invoice <span class="text-black">#012541</span></p>
+            <p class="text-slate-400">Website invoice</p>
+            <span class="text-black">#012541</span>
           </div>
         </li>
-        <li class="grid px-12 grid-cols-[50px_repeat(3,1fr)] py-4">
+        <li class="grid px sm:px-12 grid-cols-[30px_repeat(2,1fr)]  py-4">
           <i class="fa-solid fa-circle-up text-slate-500 text-xl"></i>
           <div class="flex gap-2 flex-col">
-            <div class="grid grid-cols-[100px_min-content] gap-x-4">
+            <div class="grid grid-cols-[100px_min-content]">
               <p class="font-bold text-slate-500">$7.600.00</p>
               <p class="font-bold text-red-500 bg-red-100 border-red-200 border px-2 rounded">Overdue</p>
               <p class="text-slate-500">$500.00 tax</p>
             </div>
           </div>
-          <div>
+          <div class="sm:visible hidden">
             <p class="font-bold  text-slate-600 mb-2">Reform</p>
             <p class="text-slate-400">For the work done on the website</p>
           </div>
           <div class="justify-self-end flex flex-col items-end gap-2">
             <p class="text-sky-500 font-bold">View transaction</p>
-            <p class="text-slate-400">Website invoice <span class="text-black">#012541</span></p>
+            <p class="text-slate-400">Website invoice</p>
+            <span class="text-black">#012541</span>
           </div>
         </li>
-        <li class="grid px-12 grid-cols-[50px_repeat(3,1fr)] py-4">
+        <li class="grid px sm:px-12 grid-cols-[30px_repeat(2,1fr)] py-4">
           <i class="fa-solid fa-circle-up text-slate-500 text-xl"></i>
           <div class="flex gap-2 flex-col">
-            <div class="grid grid-cols-[100px_min-content] gap-x-4">
+            <div class="grid grid-cols-[100px_min-content]">
               <p class="font-bold text-slate-500">$7.600.00</p>
               <p class="font-bold text-slate-500 bg-slate-100 border-slate-200 border px-2 rounded">Withdraw</p>
               <p class="text-slate-500">$500.00 tax</p>
             </div>
           </div>
-          <div>
+          <div class="sm:visible hidden">
             <p class="font-bold  text-slate-600 mb-2">Reform</p>
             <p class="text-slate-400">For the work done on the website</p>
           </div>
           <div class="justify-self-end flex flex-col items-end gap-2">
             <p class="text-sky-500 font-bold">View transaction</p>
-            <p class="text-slate-400">Website invoice <span class="text-black">#012541</span></p>
+            <p class="text-slate-400">Website invoice</p>
+            <span class="text-black">#012541</span>
           </div>
         </li>
       </ul>
