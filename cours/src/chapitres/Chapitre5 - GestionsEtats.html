@@ -1,21 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="../output.css">
 </head>
+
 <body>
   <div class="group rounded p-4 hover:bg-blue-500">
     <h3 class="font-medium text-gray-900 group-hover:text-white">Un titre</h3>
     <p class="text-sm text-gray-600 group-hover:text-white">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam rerum facilis dolor, at tempore amet natus sit in perferendis suscipit fuga ipsum deserunt ad eos, dolore asperiores blanditiis dicta fugiat.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam rerum facilis dolor, at tempore amet natus sit in
+      perferendis suscipit fuga ipsum deserunt ad eos, dolore asperiores blanditiis dicta fugiat.
     </p>
     <div class="group/author mt-4 flex justify-between rounded border px-4">
       <h4>John doe</h4>
       <p class="hidden group-hover/author:inline-block">+506 233 1887</p>
     </div>
   </div>
+  <h3 class="text-2xl">:*</h3>
+  <ul class="hover:*:text-red-600 cursor-pointer">
+    <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</li>
+    <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</li>
+  </ul>
+  <br>
+  <ul class="*:hover:text-red-600 cursor-pointer">
+    <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</li>
+    <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</li>
+  </ul>
+  <br><br><br>
+  <h3 class="text-2xl">peer</h3>
+  <input class="peer" type="checkbox" name="" id="bravo">
+  <!-- <p class="invisible peer-checked:visible">Bravo !</p> -->
+  <p class="hidden peer-checked:block">hidden</p>
+  <br><br><br>
+  <h3 class="text-2xl">has</h3>
+  <div class="has-[input]:bg-green-500">
+    <input class="peer" type="checkbox">
+    <p class="invisible peer-checked:visible">Bravo !</p>
+  </div>
+  <br><br><br>
+  <h3 class="text-2xl">has + peer</h3>
+  <div class="peer">
+    <input type="checkbox">
+  </div>
+  <p class="invisible peer-has-[:checked]:visible">Bravo !</p>
+
+  <div class="px-6 pb-5 pt-6 shadow">
+    <form>
+      <div>
+        <label for="email" class="block text-sm font-medium text-slate-700">Email</label>
+        <div class="mt-1">
+          <input type="email" id="email"
+            class="peer w-full rounded-md border border-slate-300 px-3 py-2 placeholder-slate-400 shadow-sm invalid:border-pink-500 invalid:text-pink-600 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+            placeholder="exemple@exemple.fr" />
+          <p class="invisible mt-2 text-sm text-pink-600 peer-invalid:visible">
+            Fournissez un email valide.
+          </p>
+        </div>
+      </div>
+    </form>
+  </div>
+  <br><br><br>
+  <h3 class="text-2xl">Before, after, placeholder, file et selection</h3>
+  <h2>Before, after</h2>
+  <p>
+    Lorem ipsum dolor sit amet consectetur,
+    <span class="relative px-1 inline-block before:absolute before:bg-red-600 before:inset-0 before:skew-y-3 before:block">
+      <a href="#" class="text-white relative">adipisicing</a>
+    </span>
+    elit. Culpa pariatur porro illo omnis? Quas quod voluptate molestias sunt voluptatum unde quibusdam eligendi fugiat! Impedit quisquam dolores commodi animi perferendis iste.
+  </p>
+  <br><br><br>
+  <input type="text" placeholder="Rechercher..." class="rounded-full border px-4 py-2 placeholder:italic placeholder:text-slate-300">
+  <br><br><br>
+  <input type="file" class="file:border-none file:rounded file:text-white file:bg-red-900 file:cursor-pointer file:px-4 file:py-2 ">
+  <br><br><br>
 </body>
+
 </html>
