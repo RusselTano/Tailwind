@@ -4,7 +4,9 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require("@tailwindcss/typography"),
+  ],
   // Ajoutez ceci pour ignorer les fichiers spécifiques
   watchOptions: {
     ignored: ["C:/DumpStack.log.tmp"],
